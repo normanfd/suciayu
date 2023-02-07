@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Feb 2023 pada 07.01
--- Versi server: 10.4.18-MariaDB
--- Versi PHP: 7.4.16
+-- Waktu pembuatan: 07 Feb 2023 pada 02.33
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -64,7 +64,7 @@ CREATE TABLE `tblkasir` (
 --
 
 INSERT INTO `tblkasir` (`NIK`, `Nama`, `Jenkel`, `Tempat_lahir`, `Tanggal_lahir`, `Alamat`) VALUES
-('12345678', 'Ayu', 'P', 'Jakarta', '2023-02-01', 'Bogor');
+('12345678', 'Ayu', 'P', 'Jakarta', '2023-02-01', 'asdsa');
 
 -- --------------------------------------------------------
 
@@ -116,7 +116,7 @@ INSERT INTO `tbltransaksi` (`idtransaksi`, `NIK`, `Kode_Barang`, `Tanggal_pembel
 
 CREATE TABLE `tbluser` (
   `username` varchar(8) NOT NULL,
-  `password` int(20) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `role` int(11) NOT NULL COMMENT '1=admin\r\n2=pelanggan'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -125,8 +125,8 @@ CREATE TABLE `tbluser` (
 --
 
 INSERT INTO `tbluser` (`username`, `password`, `role`) VALUES
-('admin', 854, 1),
-('cust', 202, 2);
+('admin', '202cb962ac59075b964b07152d234b70', 1),
+('cust', '202cb962ac59075b964b07152d234b70', 2);
 
 --
 -- Indexes for dumped tables
